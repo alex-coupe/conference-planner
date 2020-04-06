@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
-using BackEnd.Models;
+using BackEnd.Data;
 using System.Runtime.InteropServices;
 using Microsoft.OpenApi.Models;
 using System.Threading.Tasks;
