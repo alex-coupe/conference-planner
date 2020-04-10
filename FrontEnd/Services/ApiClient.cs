@@ -32,7 +32,7 @@ namespace FrontEnd.Services
 
         public async Task DeleteSessionAsync(int id)
         {
-            var response = await _httpClient.DeleteAsync($"/api/session/{id}");
+            var response = await _httpClient.DeleteAsync($"/api/sessions/{id}");
 
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
@@ -63,7 +63,7 @@ namespace FrontEnd.Services
 
         public async Task<SessionResponse> GetSessionAsync(int id)
         {
-            var response = await _httpClient.GetAsync($"/api/session/{id}");
+            var response = await _httpClient.GetAsync($"/api/sessions/{id}");
 
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
@@ -86,7 +86,7 @@ namespace FrontEnd.Services
 
         public async Task<SpeakerResponse> GetSpeakerAsync(int id)
         {
-            var response = await _httpClient.GetAsync($"/api/speaker/{id}");
+            var response = await _httpClient.GetAsync($"/api/speakers/{id}");
 
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
@@ -110,7 +110,7 @@ namespace FrontEnd.Services
 
         public async Task PutSessionAsync(Session session)
         {
-            var response = await _httpClient.PutAsJsonAsync($"/api/session/{session.Id}", session);
+            var response = await _httpClient.PutAsJsonAsync($"/api/sessions/{session.Id}", session);
 
             response.EnsureSuccessStatusCode();
             
